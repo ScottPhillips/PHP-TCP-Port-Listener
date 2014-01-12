@@ -8,12 +8,12 @@ $server->hook("INPUT","handle_input"); // Run handle_input whenever text is sent
 $server->infinite_loop(); // Run Server Code Until Process is terminated.
 
 
-function handle_connect(&$server,&$client,$input)
-{
+function handle_connect(&$server,&$client,$input) {
     SocketServer::socket_write_smart($client->socket,"String? ","");
 }
-function handle_input(&$server,&$client,$input)
-{
+
+
+function handle_input(&$server,&$client,$input) {
     // You probably want to sanitize your inputs here
     $trim = trim($input); // Trim the input, Remove Line Endings and Extra Whitespace.
 
